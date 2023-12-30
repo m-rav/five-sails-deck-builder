@@ -1,0 +1,8 @@
+SELECT * FROM deck_builder.faction where 
+	CASE WHEN
+	(select f.playable from deck_builder.faction f where f.faction_name = {{appsmith.URL.queryParams.faction}} limit 1) = True
+	then
+	deck_builder.faction.faction_name = {{appsmith.URL.queryParams.faction}}
+ELSE
+	deck_builder.faction.faction_name = 'Castille'
+END

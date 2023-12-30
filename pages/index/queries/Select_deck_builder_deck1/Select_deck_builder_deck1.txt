@@ -1,0 +1,11 @@
+SELECT
+  *
+FROM
+  deck_builder.deck
+	left join deck_builder.faction using(faction_name)
+ORDER BY
+  "{{Community_Decks.sortOrder.column || 'rowid'}}" {{Community_Decks.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{Community_Decks.pageSize}}
+OFFSET
+  {{Community_Decks.pageOffset}}

@@ -1,0 +1,68 @@
+{
+  "unpublishedPage": {
+    "name": "index",
+    "slug": "index",
+    "customSlug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 720,
+          "containerStyle": "none",
+          "snapRows": 80,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 87,
+          "minHeight": 820,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "index_Select_deck_builder_deck1",
+              "name": "Select_deck_builder_deck1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Community_Decks.pageOffset",
+                "Community_Decks.sortOrder.column || 'rowid'",
+                "Community_Decks.pageSize",
+                "Community_Decks.sortOrder.order !== \"desc\" ? \"\" : \"DESC\""
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "index_Total_record_deck_builder_deck1",
+              "name": "Total_record_deck_builder_deck1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "index",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "658e0ac88e496057e7beb987_658f80a0fe5efb388909ff40"
+}

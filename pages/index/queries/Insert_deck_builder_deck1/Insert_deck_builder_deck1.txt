@@ -1,0 +1,1 @@
+INSERT INTO deck_builder.deck ("deck_id","name","faction") VALUES ('{{(Community_Decks.newRow || {}).deck_id}}','{{(Community_Decks.newRow || {}).name}}','{{(Community_Decks.newRow || {}).faction}}')

@@ -1,0 +1,86 @@
+{
+  "unpublishedPage": {
+    "name": "Deck Editor",
+    "slug": "deck-editor",
+    "customSlug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 750,
+          "containerStyle": "none",
+          "snapRows": 124,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 87,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Deck Editor_CurrentFaction",
+              "name": "CurrentFaction",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.faction"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Deck Editor_GetFactionMetaDeta",
+              "name": "GetFactionMetaDeta",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Deck Editor_GetAvailableFactionCards",
+              "name": "GetAvailableFactionCards",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.faction"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Deck Editor_GetCurrentDeckList",
+              "name": "GetCurrentDeckList",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Deck Editor",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "gitSyncId": "658e0ac88e496057e7beb987_658e3416392800569807cf06"
+}

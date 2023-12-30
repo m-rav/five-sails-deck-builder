@@ -1,0 +1,1 @@
+UPDATE deck_builder.deck SET "deck_id"= '{{Community_Decks.updatedRow.deck_id}}', "name"= '{{Community_Decks.updatedRow.name}}', "faction"= '{{Community_Decks.updatedRow.faction}}' WHERE "rowid"= {{Community_Decks.updatedRow.rowid}};

@@ -1,0 +1,1 @@
+SELECT COUNT(*) from deck_builder.deck;

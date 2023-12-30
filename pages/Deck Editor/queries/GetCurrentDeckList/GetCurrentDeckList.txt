@@ -1,0 +1,1 @@
+SELECT * from cards.faction_cards inner join deck_builder.deck_card using (card_number) where deck_builder.deck_card.deck_id = 1;

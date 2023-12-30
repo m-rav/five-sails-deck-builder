@@ -1,0 +1,1 @@
+SELECT * FROM deck_builder.faction;
