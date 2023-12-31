@@ -15,14 +15,14 @@
   "unpublishedApplicationDetail": {
     "navigationSetting": {
       "showNavbar": true,
-      "orientation": "top",
-      "navStyle": "stacked",
+      "orientation": "side",
+      "navStyle": "sidebar",
       "position": "static",
       "itemStyle": "text",
       "colorStyle": "theme",
       "logoAssetId": "",
       "logoConfiguration": "logoAndApplicationTitle",
-      "showSignIn": true
+      "showSignIn": false
     }
   },
   "color": "#E3DEFF",

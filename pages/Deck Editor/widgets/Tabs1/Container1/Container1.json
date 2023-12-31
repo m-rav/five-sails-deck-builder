@@ -72,7 +72,7 @@
     "key": "hzjgt1912w",
     "backgroundColor": "url({{CurrentFaction.data[0].icon_link_128}}) no-repeat center {{CurrentFaction.data[0].color_secondary}}",
     "isDeprecated": false,
-    "rightColumn": 63,
+    "rightColumn": 64,
     "dynamicHeight": "FIXED",
     "widgetId": "rpg41elrpo",
     "containerStyle": "card",
