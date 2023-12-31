@@ -63,13 +63,21 @@
             "isDisabled": false
         },
         "groupButton1": {
+            "onClick": "{{navigateTo('index', {}, 'SAME_WINDOW');}}",
             "buttonType": "SIMPLE",
-            "iconName": "heart",
+            "iconName": "home",
             "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
             "widgetId": "",
-            "menuItems": {},
+            "menuItems": {"menuItem9thrfjta1v": {
+                "widgetId": "8f4fi7on4k",
+                "index": 0,
+                "id": "menuItem9thrfjta1v",
+                "label": "Menu Item 1",
+                "isDisabled": false,
+                "isVisible": true
+            }},
             "index": 0,
-            "label": "Favorite",
+            "label": "",
             "id": "groupButton1",
             "placement": "CENTER",
             "isVisible": true,
@@ -93,6 +101,7 @@
     "mobileRightColumn": 64,
     "animateLoading": true,
     "parentColumnSpace": 16.875,
+    "dynamicTriggerPathList": [{"key": "groupButtons.groupButton1.onClick"}],
     "leftColumn": 46,
     "dynamicBindingPathList": [
         {"key": "borderRadius"},
