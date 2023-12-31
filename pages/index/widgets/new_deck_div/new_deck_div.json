@@ -1,7 +1,7 @@
 {
     "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
     "mobileBottomRow": 42,
-    "widgetName": "Container1",
+    "widgetName": "new_deck_div",
     "borderColor": "{{appsmith.theme.colors.primaryColor}}",
     "isCanvas": true,
     "displayName": "Container",
