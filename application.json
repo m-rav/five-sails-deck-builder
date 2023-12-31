@@ -14,9 +14,9 @@
   "unreadCommentThreads": 0,
   "unpublishedApplicationDetail": {
     "navigationSetting": {
-      "showNavbar": true,
-      "orientation": "side",
-      "navStyle": "sidebar",
+      "showNavbar": false,
+      "orientation": "top",
+      "navStyle": "inline",
       "position": "static",
       "itemStyle": "text",
       "colorStyle": "theme",
