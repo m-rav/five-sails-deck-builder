@@ -30,13 +30,11 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Deck Editor_CurrentFaction",
-              "name": "CurrentFaction",
+              "id": "Deck Editor_GetCurrentDeckList",
+              "name": "GetCurrentDeckList",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.faction"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
@@ -50,6 +48,18 @@
           ],
           [
             {
+              "id": "Deck Editor_CurrentFaction",
+              "name": "CurrentFaction",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.faction"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Deck Editor_GetAvailableFactionCards",
               "name": "GetAvailableFactionCards",
               "confirmBeforeExecute": false,
@@ -57,14 +67,6 @@
               "jsonPathKeys": [
                 "appsmith.URL.queryParams.faction"
               ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Deck Editor_GetCurrentDeckList",
-              "name": "GetCurrentDeckList",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]

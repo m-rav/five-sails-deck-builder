@@ -22,7 +22,6 @@
     "dynamicTriggerPathList": [],
     "leftColumn": 0,
     "dynamicBindingPathList": [
-        {"key": "borderRadius"},
         {"key": "boxShadow"},
         {"key": "backgroundColor"},
         {"key": "accentColor"}
@@ -122,8 +121,8 @@
     "key": "nuifd3l72i",
     "backgroundColor": "{{CurrentFaction.data[0].color_primary}}",
     "isDeprecated": false,
-    "rightColumn": 49,
-    "dynamicHeight": "AUTO_HEIGHT",
+    "rightColumn": 48,
+    "dynamicHeight": "FIXED",
     "accentColor": "{{CurrentFaction.data[0].color_secondary}}",
     "widgetId": "siin3me7y2",
     "defaultTab": "Faction Deck",
@@ -155,10 +154,8 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 15,
     "responsiveBehavior": "fill",
-    "originalTopRow": 0,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "borderRadius": "0px",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 75,
     "minDynamicHeight": 10
 }
