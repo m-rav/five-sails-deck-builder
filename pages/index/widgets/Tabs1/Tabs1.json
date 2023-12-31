@@ -7,8 +7,8 @@
     "dynamicPropertyPathList": [],
     "displayName": "Tabs",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.9e3d67c0af9c0bd092dc56240314e18a.svg",
-    "topRow": 4,
-    "bottomRow": 40,
+    "topRow": 0,
+    "bottomRow": 36,
     "parentRowSpace": 10,
     "type": "TABS_WIDGET",
     "hideCard": false,
@@ -20,7 +20,6 @@
     "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
-        {"key": "borderRadius"},
         {"key": "boxShadow"},
         {"key": "backgroundColor"}
     ],
@@ -150,7 +149,7 @@
     "isLoading": false,
     "mobileTopRow": 34,
     "responsiveBehavior": "fill",
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "borderRadius": "0px",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
     "minDynamicHeight": 15
