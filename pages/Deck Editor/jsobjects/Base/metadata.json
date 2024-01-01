@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "Base",
+    "pageId": "Deck Editor",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "deck_list",
+        "value": "[]"
+      },
+      {
+        "name": "currentFaction",
+        "value": "DeckData.getCurrentFaction()"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Deck Editor_Base",
+  "deleted": false,
+  "gitSyncId": "658e0ac88e496057e7beb987_658f6ff6848d9a25ab91d892"
+}

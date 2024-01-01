@@ -1,7 +1,7 @@
 {
     "boxShadow": "none",
     "mobileBottomRow": 111,
-    "widgetName": "Modal1",
+    "widgetName": "export_modal",
     "isCanvas": true,
     "displayName": "Modal",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.b374721fa8e1aeab7cf326c2d865506f.svg",

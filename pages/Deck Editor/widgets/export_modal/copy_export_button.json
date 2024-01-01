@@ -3,7 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 16,
     "widgetName": "copy_export_button",
-    "onClick": "{{copyToClipboard(Input1.text);}}",
+    "onClick": "{{copyToClipboard(export_string_textbox.text);}}",
     "buttonColor": "{{appsmith.theme.colors.backgroundColor}}",
     "dynamicPropertyPathList": [],
     "displayName": "Button",

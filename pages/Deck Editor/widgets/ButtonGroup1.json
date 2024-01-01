@@ -84,7 +84,7 @@
             "isDisabled": false
         },
         "groupButton2": {
-            "onClick": "{{showModal('Modal1');}}",
+            "onClick": "{{JSObject1.setExportData();\nshowModal('export_modal');}}",
             "buttonType": "SIMPLE",
             "iconName": "share",
             "buttonColor": "{{appsmith.theme.colors.primaryColor}}",

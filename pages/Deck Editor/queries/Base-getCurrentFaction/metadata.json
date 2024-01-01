@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "getCurrentFaction",
-    "fullyQualifiedName": "DeckData.getCurrentFaction",
+    "fullyQualifiedName": "Base.getCurrentFaction",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,7 +14,7 @@
       "userPermissions": []
     },
     "pageId": "Deck Editor",
-    "collectionId": "Deck Editor_DeckData",
+    "collectionId": "Deck Editor_Base",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -34,9 +34,10 @@
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-12-30T23:29:58Z"
   },
-  "id": "Deck Editor_DeckData.getCurrentFaction",
+  "id": "Deck Editor_Base.getCurrentFaction",
   "deleted": false,
   "gitSyncId": "658e0ac88e496057e7beb987_658fb068fe5efb388909ffde"
 }

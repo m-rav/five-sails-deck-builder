@@ -40,23 +40,23 @@
           ],
           [
             {
+              "id": "Deck Editor_Base.getCurrentFaction",
+              "name": "Base.getCurrentFaction",
+              "collectionId": "Deck Editor_Base",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  var currentFaction;\n  for (var faction of GetFactionMetaDeta.data) {\n    if (faction.playable) {\n      currentFaction = faction;\n    }\n    console.log(faction);\n    console.log(faction.faction_name === appsmith.URL.queryParams.faction);\n  }\n  return currentFaction;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Deck Editor_CurrentFaction",
               "name": "CurrentFaction",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
                 "appsmith.URL.queryParams.faction"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Deck Editor_DeckData.getCurrentFaction",
-              "name": "DeckData.getCurrentFaction",
-              "collectionId": "Deck Editor_DeckData",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "function () {\n  var currentFaction;\n  for (var faction of GetFactionMetaDeta.data) {\n    if (faction.playable) {\n      currentFaction = faction;\n    }\n    console.log(faction);\n    console.log(faction.faction_name === appsmith.URL.queryParams.faction);\n  }\n  return currentFaction;\n}"
               ],
               "timeoutInMillisecond": 10000
             }
