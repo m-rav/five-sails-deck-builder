@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "GetCurrentDeckList",
+    "name": "PlayableFactions",
     "datasource": {
       "name": "CardDb",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Deck Editor",
+    "pageId": "index",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * from cards.faction_cards inner join deck_builder.deck_card using (card_number) where deck_builder.deck_card.deck_id = 1;",
+      "body": "select * from deck_builder.faction where deck_builder.faction.playable = true;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -36,9 +36,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-30T23:29:58Z"
+    "createdAt": "2023-12-31T02:30:13Z"
   },
-  "id": "Deck Editor_GetCurrentDeckList",
+  "id": "index_PlayableFactions",
   "deleted": false,
-  "gitSyncId": "658e0ac88e496057e7beb987_658e7a4d8e496057e7bebc5c"
+  "gitSyncId": "6590a7f6a96f726ee2cd5e96_6590d235fe5efb38890a060e"
 }

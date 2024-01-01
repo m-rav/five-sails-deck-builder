@@ -1,5 +1,5 @@
 INSERT INTO deck_builder.deck_card ("deck_id", "card_number", "quantity")
-VALUES(1, {{tbl_available_faction_cards.triggeredRow.card_number}}, 1) 
+VALUES(1, {{available_faction_cards_table.triggeredRow.card_number}}, 1) 
 ON CONFLICT (deck_id, card_number)
 DO UPDATE SET 
 	quantity = case when (select cards.core.quantity from cards.core where cards.core.card_number = deck_builder.deck_card.card_number limit 1) > (deck_card.quantity) then deck_card.quantity + 1 else deck_card.quantity end

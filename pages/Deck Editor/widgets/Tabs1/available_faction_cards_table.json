@@ -27,7 +27,7 @@
     "needsHeightForContent": true,
     "leftColumn": 0,
     "delimiter": ",",
-    "defaultSelectedRowIndex": 0,
+    "defaultSelectedRowIndex": "-1",
     "flexVerticalAlignment": "start",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "isVisibleFilters": true,
@@ -67,7 +67,7 @@
     "columnUpdatedAt": 1703929236781,
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 70,
-    "widgetName": "Table1",
+    "widgetName": "available_faction_cards_table",
     "defaultPageSize": 0,
     "columnOrder": [
         "faction",
@@ -86,8 +86,9 @@
     "bottomRow": 69,
     "columnWidthMap": {
         "parry": 81,
+        "cost": 67,
         "faction": 60,
-        "type": 75,
+        "type": 102,
         "riposte": 96
     },
     "parentRowSpace": 10,
@@ -98,7 +99,7 @@
     "borderWidth": "1",
     "primaryColumns": {
         "parry": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"parry\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"parry\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "parry",
@@ -129,7 +130,7 @@
             "verticalAlignment": "CENTER"
         },
         "cost": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cost\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cost\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "cost",
@@ -160,7 +161,7 @@
             "verticalAlignment": "CENTER"
         },
         "card_number": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"card_number\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"card_number\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "card_number",
@@ -191,7 +192,7 @@
             "verticalAlignment": "CENTER"
         },
         "icon_link_64": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"icon_link_64\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"icon_link_64\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "icon_link_64",
@@ -225,7 +226,7 @@
             "verticalAlignment": "CENTER"
         },
         "deck": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"deck\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"deck\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "deck",
@@ -256,7 +257,7 @@
             "verticalAlignment": "CENTER"
         },
         "faction": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"icon_link_64\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"icon_link_64\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "faction",
@@ -287,7 +288,7 @@
             "verticalAlignment": "CENTER"
         },
         "name": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "name",
@@ -318,7 +319,7 @@
             "verticalAlignment": "CENTER"
         },
         "thrust": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"thrust\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"thrust\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "thrust",
@@ -349,7 +350,7 @@
             "verticalAlignment": "CENTER"
         },
         "type": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"type\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"type\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "type",
@@ -380,7 +381,7 @@
             "verticalAlignment": "CENTER"
         },
         "riposte": {
-            "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"riposte\"]))}}",
+            "computedValue": "{{available_faction_cards_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"riposte\"]))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "riposte",
@@ -414,7 +415,7 @@
     "key": "in4h00o6c5",
     "canFreezeColumn": true,
     "isDeprecated": false,
-    "rightColumn": 63,
+    "rightColumn": 64,
     "textSize": "0.875rem",
     "widgetId": "uq8o42c657",
     "minWidth": 450,

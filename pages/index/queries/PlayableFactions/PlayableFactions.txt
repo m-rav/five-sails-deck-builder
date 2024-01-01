@@ -1,0 +1,1 @@
+select * from deck_builder.faction where deck_builder.faction.playable = true;

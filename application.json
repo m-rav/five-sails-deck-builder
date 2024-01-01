@@ -14,15 +14,15 @@
   "unreadCommentThreads": 0,
   "unpublishedApplicationDetail": {
     "navigationSetting": {
-      "showNavbar": true,
+      "showNavbar": false,
       "orientation": "top",
-      "navStyle": "stacked",
+      "navStyle": "inline",
       "position": "static",
       "itemStyle": "text",
       "colorStyle": "theme",
       "logoAssetId": "",
       "logoConfiguration": "logoAndApplicationTitle",
-      "showSignIn": true
+      "showSignIn": false
     }
   },
   "color": "#E3DEFF",

@@ -1,11 +1,11 @@
 {
     "boxShadow": "none",
     "mobileBottomRow": 25,
-    "widgetName": "Image1",
+    "widgetName": "five_sails_img",
     "displayName": "Image",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.69b0f0dd810281fbd6e34fc2c3f39344.svg",
     "topRow": 0,
-    "bottomRow": 25,
+    "bottomRow": 23,
     "parentRowSpace": 10,
     "type": "IMAGE_WIDGET",
     "hideCard": false,

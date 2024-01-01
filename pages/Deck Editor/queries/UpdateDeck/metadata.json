@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO deck_builder.deck_card (\"deck_id\", \"card_number\", \"quantity\")\nVALUES(1, {{tbl_available_faction_cards.triggeredRow.card_number}}, 1) \nON CONFLICT (deck_id, card_number)\nDO UPDATE SET \n\tquantity = case when (select cards.core.quantity from cards.core where cards.core.card_number = deck_builder.deck_card.card_number limit 1) > (deck_card.quantity) then deck_card.quantity + 1 else deck_card.quantity end",
+      "body": "INSERT INTO deck_builder.deck_card (\"deck_id\", \"card_number\", \"quantity\")\nVALUES(1, {{available_faction_cards_table.triggeredRow.card_number}}, 1) \nON CONFLICT (deck_id, card_number)\nDO UPDATE SET \n\tquantity = case when (select cards.core.quantity from cards.core where cards.core.card_number = deck_builder.deck_card.card_number limit 1) > (deck_card.quantity) then deck_card.quantity + 1 else deck_card.quantity end",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "tbl_available_faction_cards.triggeredRow.card_number"
+      "available_faction_cards_table.triggeredRow.card_number"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

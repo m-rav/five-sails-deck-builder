@@ -1,7 +1,7 @@
 {
     "boxShadow": "none",
     "mobileBottomRow": 12,
-    "widgetName": "Image1",
+    "widgetName": "card_image",
     "dynamicPropertyPathList": [],
     "displayName": "Image",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.69b0f0dd810281fbd6e34fc2c3f39344.svg",
@@ -24,7 +24,7 @@
     "defaultImage": "{{CurrentFaction.data[0].back_image}}",
     "flexVerticalAlignment": "start",
     "key": "dyogw6ayzg",
-    "image": "{{Table1.selectedRow.card_number ? `https://7s5s-db.illustration.flatemars.com/illustration/7S5S-${Table1.selectedRow.card_number}.png` : CurrentFaction.data[0].back_image}}",
+    "image": "{{available_faction_cards_table.selectedRow.card_number ? `https://7s5s-db.illustration.flatemars.com/illustration/7S5S-${available_faction_cards_table.selectedRow.card_number}.png` : CurrentFaction.data[0].back_image}}",
     "isDeprecated": false,
     "rightColumn": 20,
     "objectFit": "contain",

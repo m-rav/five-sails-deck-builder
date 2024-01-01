@@ -14,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 720,
+          "bottomRow": 1500,
           "containerStyle": "none",
           "snapRows": 80,
           "parentRowSpace": 1,
@@ -29,14 +29,24 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "index_PlayableFactions",
+              "name": "PlayableFactions",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "index_Select_deck_builder_deck1",
               "name": "Select_deck_builder_deck1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
                 "Community_Decks.pageOffset",
-                "Community_Decks.sortOrder.column || 'rowid'",
                 "Community_Decks.pageSize",
+                "Community_Decks.sortOrder.column || 'rowid'",
                 "Community_Decks.sortOrder.order !== \"desc\" ? \"\" : \"DESC\""
               ],
               "timeoutInMillisecond": 10000
