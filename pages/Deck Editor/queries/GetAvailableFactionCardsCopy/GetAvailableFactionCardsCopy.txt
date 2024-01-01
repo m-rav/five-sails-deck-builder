@@ -1,0 +1,6 @@
+SELECT cards.faction_cards.*, deck_builder.faction.icon_link_64 
+FROM 
+	cards.faction_cards 
+	left join deck_builder.faction on cards.faction_cards.faction = deck_builder.faction.faction_name
+where 
+	cards.faction_cards.faction in ('Neutral', {{this.params.faction_name}})

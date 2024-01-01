@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "GetFactionCardsInUrl",
+    "name": "GetFactionMetaData",
     "datasource": {
       "name": "CardDb",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM cards.faction_cards WHERE cards.faction_cards.card_number = ANY( ({{appsmith.URL.queryParams.deckList ?\tJSON.parse(atob(appsmith.URL.queryParams.deckList)).ids : null}}))",
+      "body": "SELECT * FROM deck_builder.faction;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,25 +26,19 @@
         }
       ]
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "appsmith.URL.queryParams.deckList ?\tJSON.parse(atob(appsmith.URL.queryParams.deckList)).ids : null"
-    ],
-    "userSetOnLoad": false,
+    "jsonPathKeys": [],
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-31T03:48:57Z"
+    "createdAt": "2023-12-30T23:29:58Z"
   },
-  "id": "Deck Editor_GetFactionCardsInUrl",
+  "id": "Deck Editor_GetFactionMetaData",
   "deleted": false,
-  "gitSyncId": "6590a7f6a96f726ee2cd5e96_6590e4a9fe5efb38890a0678"
+  "gitSyncId": "658e0ac88e496057e7beb987_658facf7a96f726ee2cd5b1c"
 }

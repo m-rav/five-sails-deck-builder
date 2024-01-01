@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "GetFactionCardsInUrl",
+    "name": "GetAvailableFactionCardsCopy",
     "datasource": {
       "name": "CardDb",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM cards.faction_cards WHERE cards.faction_cards.card_number = ANY( ({{appsmith.URL.queryParams.deckList ?\tJSON.parse(atob(appsmith.URL.queryParams.deckList)).ids : null}}))",
+      "body": "SELECT cards.faction_cards.*, deck_builder.faction.icon_link_64 \nFROM \n\tcards.faction_cards \n\tleft join deck_builder.faction on cards.faction_cards.faction = deck_builder.faction.faction_name\nwhere \n\tcards.faction_cards.faction in ('Neutral', {{this.params.faction_name}})",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,15 +36,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.URL.queryParams.deckList ?\tJSON.parse(atob(appsmith.URL.queryParams.deckList)).ids : null"
+      "this.params.faction_name"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2023-12-31T03:48:57Z"
+    "userPermissions": []
   },
-  "id": "Deck Editor_GetFactionCardsInUrl",
+  "id": "Deck Editor_GetAvailableFactionCardsCopy",
   "deleted": false,
-  "gitSyncId": "6590a7f6a96f726ee2cd5e96_6590e4a9fe5efb38890a0678"
+  "gitSyncId": "6590a7f6a96f726ee2cd5e96_6592714dfe5efb38890a0d79"
 }

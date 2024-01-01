@@ -8,8 +8,8 @@
     "archivedActions": [],
     "variables": [
       {
-        "name": "deck_list",
-        "value": "[]"
+        "name": "defaultFaction",
+        "value": "\"Castille\""
       }
     ],
     "userPermissions": []

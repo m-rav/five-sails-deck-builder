@@ -81,7 +81,7 @@
         "parry",
         "thrust"
     ],
-    "dynamicPropertyPathList": [],
+    "dynamicPropertyPathList": [{"key": "tableData"}],
     "compactMode": "SHORT",
     "displayName": "Table",
     "bottomRow": 70,
@@ -433,7 +433,7 @@
     "textSize": "0.875rem",
     "widgetId": "21kdwi2qrt",
     "minWidth": 450,
-    "tableData": "{{GetFactionCardsInUrl.data}}",
+    "tableData": "{{JSObject1.P.data}}",
     "label": "Data",
     "searchKey": "",
     "parentId": "0",

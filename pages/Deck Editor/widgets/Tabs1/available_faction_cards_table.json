@@ -12,7 +12,6 @@
         {"key": "accentColor"},
         {"key": "borderRadius"},
         {"key": "boxShadow"},
-        {"key": "tableData"},
         {"key": "primaryColumns.card_number.computedValue"},
         {"key": "primaryColumns.name.computedValue"},
         {"key": "primaryColumns.cost.computedValue"},
@@ -22,7 +21,8 @@
         {"key": "primaryColumns.riposte.computedValue"},
         {"key": "primaryColumns.parry.computedValue"},
         {"key": "primaryColumns.thrust.computedValue"},
-        {"key": "primaryColumns.icon_link_64.computedValue"}
+        {"key": "primaryColumns.icon_link_64.computedValue"},
+        {"key": "tableData"}
     ],
     "needsHeightForContent": true,
     "leftColumn": 0,
@@ -64,7 +64,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1703929236781,
+    "columnUpdatedAt": 1704091811137,
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 70,
     "widgetName": "available_faction_cards_table",
@@ -81,7 +81,7 @@
         "thrust",
         "icon_link_64"
     ],
-    "dynamicPropertyPathList": [],
+    "dynamicPropertyPathList": [{"key": "tableData"}],
     "displayName": "Table",
     "bottomRow": 69,
     "columnWidthMap": {
@@ -419,7 +419,7 @@
     "textSize": "0.875rem",
     "widgetId": "uq8o42c657",
     "minWidth": 450,
-    "tableData": "{{GetAvailableFactionCards.data}}",
+    "tableData": "{{JSObject1.parseUrlData.data.availableFactionCards}}",
     "label": "Data",
     "searchKey": "",
     "parentId": "rcbl49rcsd",
