@@ -11,6 +11,11 @@ export default {
 		}
 		return currentFaction;
 	},
+	setExportData() {
+		let decodedExport = {f:0, ids:[1,19,125,200],qtys:[1,0,0,1]};
+		return btoa(decodedExport.toString());
+  },
+	copyExportData: () => copyToClipboard(Input1.text),
 	currentFaction: this.getCurrentFaction()
 	// allFactions : GetFactionMetaDeta.data,
 	// currentFaction : CurrentFaction.data[0],
@@ -22,4 +27,5 @@ export default {
 		// 
 		// 
 	// },
+	
 }

@@ -1,1 +1,1 @@
-SELECT * FROM cards.faction_cards WHERE cards.faction_cards.card_number in ({{appsmith.URL.queryParams.deckList ?	Object.keys(atob(appsmith.URL.queryParams.deckList)) : null}})
+SELECT * FROM cards.faction_cards WHERE cards.faction_cards.card_number = ANY( ({{appsmith.URL.queryParams.deckList ?	JSON.parse(atob(appsmith.URL.queryParams.deckList)).ids : null}}))

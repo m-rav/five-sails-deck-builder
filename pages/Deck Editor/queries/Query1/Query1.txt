@@ -1,1 +1,0 @@
-SELECT * FROM cards."abilities" LIMIT 10;

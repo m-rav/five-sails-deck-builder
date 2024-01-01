@@ -30,14 +30,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Deck Editor_GetCurrentDeckList",
-              "name": "GetCurrentDeckList",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Deck Editor_GetFactionMetaDeta",
               "name": "GetFactionMetaDeta",
               "confirmBeforeExecute": false,
@@ -56,6 +48,17 @@
                 "appsmith.URL.queryParams.faction"
               ],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Deck Editor_DeckData.getCurrentFaction",
+              "name": "DeckData.getCurrentFaction",
+              "collectionId": "Deck Editor_DeckData",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  var currentFaction;\n  for (var faction of GetFactionMetaDeta.data) {\n    if (faction.playable) {\n      currentFaction = faction;\n    }\n    console.log(faction);\n    console.log(faction.faction_name === appsmith.URL.queryParams.faction);\n  }\n  return currentFaction;\n}"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -66,6 +69,16 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "appsmith.URL.queryParams.faction"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Deck Editor_GetFactionCardsInUrl",
+              "name": "GetFactionCardsInUrl",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.deckList ?\tJSON.parse(atob(appsmith.URL.queryParams.deckList)).ids : null"
               ],
               "timeoutInMillisecond": 10000
             }

@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM cards.faction_cards WHERE cards.faction_cards.card_number in ({{appsmith.URL.queryParams.deckList ?\tObject.keys(atob(appsmith.URL.queryParams.deckList)) : null}})",
+      "body": "SELECT * FROM cards.faction_cards WHERE cards.faction_cards.card_number = ANY( ({{appsmith.URL.queryParams.deckList ?\tJSON.parse(atob(appsmith.URL.queryParams.deckList)).ids : null}}))",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.URL.queryParams.deckList ?\tObject.keys(atob(appsmith.URL.queryParams.deckList)) : null"
+      "appsmith.URL.queryParams.deckList ?\tJSON.parse(atob(appsmith.URL.queryParams.deckList)).ids : null"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
