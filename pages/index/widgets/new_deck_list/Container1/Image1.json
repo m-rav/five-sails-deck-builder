@@ -16,7 +16,7 @@
         {"key": "borderRadius"},
         {"key": "image"}
     ],
-    "leftColumn": 2,
+    "leftColumn": 1,
     "defaultImage": "https://assets.appsmith.com/widgets/default.png",
     "flexVerticalAlignment": "start",
     "key": "8n9t4pndhu",

@@ -1,11 +1,11 @@
 export default {
 	defaultFaction: "Castille",
 	async getDefaultDeck() {
-		let faction = this.determineFaction(this.defaultFaction);
-		const result = await GetAvailableFactionCardsCopy.run(faction);
+		const faction = this.determineFaction(this.defaultFaction);
+		const availableFactionCards = await GetAvailableFactionCardsCopy.run(faction);
 		return {
 			"faction": faction,
-			"availableFactionCards": result,
+			"availableFactionCards": availableFactionCards,
 			"deckList": []
 		};
 	},
@@ -18,7 +18,7 @@ export default {
 		}
 		throw new Error("No Faction with name " + factionName);
 	},
-	parseUrlData() {
+	async parseUrlData() {
 		let hasDeckId = appsmith.URL.queryParams.hasOwnProperty('deckId');
 		if (hasDeckId) {
 			const savedDeckId = parseInt(appsmith.URL.queryParams.deckId);
@@ -30,8 +30,10 @@ export default {
 				const deckDataEncoded = appsmith.URL.queryParams.deckList;
 				const deckDataDecoded = JSON.parse(atob(deckDataEncoded));
 				const faction = this.determineFaction(deckDataDecoded.f);
+				const availableFactionCards = await GetAvailableFactionCardsCopy.run(faction);
 				return {
 						faction:faction,
+						"availableFactionCards": availableFactionCards,
 						ids: [1],
 						qtys: [1]
 				};
