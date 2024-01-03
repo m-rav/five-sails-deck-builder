@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -42,7 +42,7 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-29T03:15:26Z"
+    "createdAt": "2023-12-30T23:29:58Z"
   },
   "id": "Deck Editor_GetAvailableFactionCards",
   "deleted": false,

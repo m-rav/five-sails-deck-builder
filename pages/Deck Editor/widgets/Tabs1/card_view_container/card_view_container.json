@@ -75,7 +75,7 @@
     "borderWidth": "1",
     "flexVerticalAlignment": "stretch",
     "key": "hzjgt1912w",
-    "backgroundColor": "url({{CurrentFaction.data[0].icon_link_128}}) no-repeat center {{CurrentFaction.data[0].color_secondary}}",
+    "backgroundColor": "url({{JSObject1.parseUrlData.data.faction.icon_link_128}}) no-repeat center {{JSObject1.parseUrlData.data.faction.color_secondary}}",
     "isDeprecated": false,
     "rightColumn": 64,
     "dynamicHeight": "FIXED",

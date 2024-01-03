@@ -2,7 +2,7 @@ export default {
 	deck_list: [],
 	getCurrentFaction () {
 		var currentFaction;
-		for(var faction of (GetFactionMetaDeta.data)) {
+		for(var faction of (GetFactionMetaData.data)) {
 			if (faction.playable) {
 				currentFaction = faction;
 			}
@@ -11,11 +11,6 @@ export default {
 		}
 		return currentFaction;
 	},
-	setExportData() {
-		let decodedExport = {f:0, ids:[1,19,125,200],qtys:[1,0,0,1]};
-		return btoa(decodedExport.toString());
-  },
-	copyExportData: () => copyToClipboard(export_string_textbox.text),
 	currentFaction: this.getCurrentFaction()
 	// allFactions : GetFactionMetaDeta.data,
 	// currentFaction : CurrentFaction.data[0],

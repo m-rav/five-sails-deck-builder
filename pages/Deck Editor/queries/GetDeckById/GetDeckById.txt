@@ -1,0 +1,1 @@
+select * from deck_builder.deck where deck_builder.deck.deck_id = {{this.params.deck_id}} limit 1;

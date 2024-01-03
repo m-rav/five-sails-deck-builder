@@ -1,0 +1,8 @@
+CASE WHEN {{JSObject1.P.data.deckId}} is null THEN
+SELECT * 
+FROM 
+	cards.faction_cards 
+WHERE 
+	cards.faction_cards.card_number = ANY({{JSObject1.P.data.ids}})
+ELSE
+END

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "GetFactionMetaDeta",
+    "name": "GetFactionCardsInUrlCopy",
     "datasource": {
       "name": "CardDb",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM deck_builder.faction;",
+      "body": "",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,19 +26,19 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-30T05:39:03Z"
+    "createdAt": "2024-01-01T05:30:43Z"
   },
-  "id": "Deck Editor_GetFactionMetaDeta",
+  "id": "Deck Editor_GetFactionCardsInUrlCopy",
   "deleted": false,
-  "gitSyncId": "658e0ac88e496057e7beb987_658facf7a96f726ee2cd5b1c"
+  "gitSyncId": "6590a7f6a96f726ee2cd5e96_65924e03883dcf766293dd16"
 }

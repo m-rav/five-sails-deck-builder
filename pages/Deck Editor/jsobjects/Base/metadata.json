@@ -13,7 +13,7 @@
       },
       {
         "name": "currentFaction",
-        "value": "DeckData.getCurrentFaction()"
+        "value": "Base.getCurrentFaction()"
       }
     ],
     "userPermissions": []
