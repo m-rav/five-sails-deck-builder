@@ -30,11 +30,46 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Deck Editor_CurrentFaction",
+              "name": "CurrentFaction",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.faction"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Deck Editor_GetFactionMetaData",
               "name": "GetFactionMetaData",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Deck Editor_GetAvailableFactionCardsCopy",
+              "name": "GetAvailableFactionCardsCopy",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.faction_name"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Deck Editor_JSObject1.parseUrlData",
+              "name": "JSObject1.parseUrlData",
+              "collectionId": "Deck Editor_JSObject1",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  let hasDeckId = appsmith.URL.queryParams.hasOwnProperty('deckId');\n  if (hasDeckId) {\n    const savedDeckId = parseInt(appsmith.URL.queryParams.deckId);\n    const savedDeckData = GetDeckById.run(savedDeckId);\n  }\n  let hasDeckList = appsmith.URL.queryParams.hasOwnProperty('deckList');\n  if (hasDeckList) {\n    try {\n      const deckDataEncoded = appsmith.URL.queryParams.deckList;\n      const deckDataDecoded = JSON.parse(atob(deckDataEncoded));\n      const faction = JSObject1.determineFaction(deckDataDecoded.f);\n      await GetAvailableFactionCardsCopy.run(faction);\n      let availableFactionCards = [...GetAvailableFactionCardsCopy.data];\n      console.log(typeof availableFactionCards);\n      console.log('wtf');\n      const selectedCards = JSObject1.getSelectedFactionCards(availableFactionCards, [1, 2, 3, 10, 20, 30, 40, 63, 22], [1, 2, 3, 10, 20, 30, 40, 63, 22]);\n      return {\n        faction: faction,\n        \"availableFactionCards\": availableFactionCards,\n        \"selectedCards\": selectedCards\n      };\n    } catch (error) {\n      console.log(error);\n    }\n  }\n  return JSObject1.getDefaultDeck();\n}"
+              ],
               "timeoutInMillisecond": 10000
             }
           ],
@@ -47,27 +82,6 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "function () {\n  var currentFaction;\n  for (var faction of GetFactionMetaData.data) {\n    if (faction.playable) {\n      currentFaction = faction;\n    }\n    console.log(faction);\n    console.log(faction.faction_name === appsmith.URL.queryParams.faction);\n  }\n  return currentFaction;\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Deck Editor_CurrentFaction",
-              "name": "CurrentFaction",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.URL.queryParams.faction"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Deck Editor_JSObject1.parseUrlData",
-              "name": "JSObject1.parseUrlData",
-              "collectionId": "Deck Editor_JSObject1",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  let hasDeckId = appsmith.URL.queryParams.hasOwnProperty('deckId');\n  if (hasDeckId) {\n    const savedDeckId = parseInt(appsmith.URL.queryParams.deckId);\n    const savedDeckData = GetDeckById.run(savedDeckId);\n  }\n  let hasDeckList = appsmith.URL.queryParams.hasOwnProperty('deckList');\n  if (hasDeckList) {\n    try {\n      const deckDataEncoded = appsmith.URL.queryParams.deckList;\n      const deckDataDecoded = JSON.parse(atob(deckDataEncoded));\n      const faction = JSObject1.determineFaction(deckDataDecoded.f);\n      const availableFactionCards = await GetAvailableFactionCardsCopy.run(faction);\n      return {\n        faction: faction,\n        \"availableFactionCards\": availableFactionCards,\n        ids: [1],\n        qtys: [1]\n      };\n    } catch (error) {\n      console.log(error);\n    }\n  }\n  return JSObject1.getDefaultDeck();\n}"
               ],
               "timeoutInMillisecond": 10000
             }

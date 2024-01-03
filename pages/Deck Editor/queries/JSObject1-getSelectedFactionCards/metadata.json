@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "determineFaction",
-    "fullyQualifiedName": "JSObject1.determineFaction",
+    "name": "getSelectedFactionCards",
+    "fullyQualifiedName": "JSObject1.getSelectedFactionCards",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -22,7 +22,13 @@
       "selfReferencingDataPaths": [],
       "jsArguments": [
         {
-          "name": "factionName"
+          "name": "factionCards"
+        },
+        {
+          "name": "ids"
+        },
+        {
+          "name": "quantities"
         }
       ]
     },
@@ -40,7 +46,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Deck Editor_JSObject1.determineFaction",
+  "id": "Deck Editor_JSObject1.getSelectedFactionCards",
   "deleted": false,
-  "gitSyncId": "6590a7f6a96f726ee2cd5e96_65938e40a96f726ee2cd6b8f"
+  "gitSyncId": "6590a7f6a96f726ee2cd5e96_659374e4883dcf766293e19d"
 }
