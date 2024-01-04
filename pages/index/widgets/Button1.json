@@ -3,7 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 76,
     "widgetName": "Button1",
-    "onClick": "{{navigateTo('https://sxihlxixtitvamtyrfmj.supabase.co/auth/v1/authorize', {\n  // \"key\": \"value\",\n  \"provider\": \"discord\",\n}, 'SAME_WINDOW');}}",
+    "onClick": "{{navigateTo('https://sxihlxixtitvamtyrfmj.supabase.co/auth/v1/authorize', {\n  // \"key\": \"value\",\n  \"provider\": \"discord\",\n  \"redirect_to\": \"https://app.appsmith.com/app/city-of-five-sails-deck-builder/index-658f80a0fe5efb388909ff41?branch=dev\"\n}, 'SAME_WINDOW');}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "dynamicPropertyPathList": [],
     "displayName": "Button",
